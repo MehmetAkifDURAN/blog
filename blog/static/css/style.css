@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --yellow: #FFE194;
+    --light-turquoise: #E8F6EF;
+    --turquoise: #B8DFD8;
+    --purple: #4C4C6D;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* display:flex; */
+.flx-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flx-space-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* display:flex; */
+
+/* header */
+header {
+    background-color: var(--turquoise);
+}
+
+#logo-box {
+    background-color: var(--purple);
+}
+
+#logo-box a {
+    background-color: var(--light-turquoise);
+    color: var(--purple);
+    padding: 1.6rem 2.4rem;
+    cursor: pointer;
+    transition: all .4s ease-out;
+}
+
+#logo-box a:hover {
+    background-color: var(--purple);
+    color: var(--turquoise);
+}
+
+/* search-form */
+.header-icons {
+    width: 50%;
+    padding: .8rem;
+}
+
+#search-form {
+    position: relative;
+    width: 6rem;
+    height: 5rem;
+    transition: .5s;
+}
+
+#search-form:hover {
+    width: 100%;
+}
+
+#search-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    padding: .8rem 1.6rem;
+    color: var(--purple);
+    z-index: 1;
+    background: var(--light-turquoise);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1),
+        5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+#search-form #search-input::placeholder,
+#search-form #search-input {
+    color: transparent;
+}
+
+#search-form:hover #search-input::placeholder,
+#search-form:hover #search-input {
+    color: var(--purple);
+}
+
+#search-btn {
+    position: absolute;
+    right: 2rem;
+    outline: none;
+    border: none;
+    background: transparent;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#search-icon {
+    font-size: 2rem;
+    color: var(--purple);
+}
