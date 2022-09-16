@@ -7,8 +7,8 @@ from django.contrib.auth.models import User
 class BlogPost(models.Model):
     title = models.CharField(verbose_name='Başlık', unique=True, max_length=50)
     description = models.TextField(verbose_name='Açıklama', max_length=500)
-    cover_image = models.FileField(
-        verbose_name='Kapak Resmi', upload_to='images')
+    image = models.FileField(
+        upload_to='images', verbose_name='Kapak Resmi', null=True)
     is_active = models.BooleanField(verbose_name='Aktif Mi', default=False)
     slug = models.SlugField(verbose_name='URL', unique=True, db_index=True)
     blogger = models.ForeignKey(

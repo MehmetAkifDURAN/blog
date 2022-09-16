@@ -4,7 +4,26 @@
 {% block page_title %}Ana Sayfa{% endblock %}
 {% block content %}
     <main>
-        <h1>Index.html</h1>
+        <div class="container">
+            <section>
+                <ul class="blog-posts">
+                    {% for blog_post in blog_posts %}
+                        <li class="blog-post-item">
+                            <a href="" class="blog-post-link">
+                                <div class="blog-post-img-box">
+                                    <img src="{% static blog_post.image %}" class="blog-post-img">
+                                    <div class="img-overlay"></div>
+                                </div>
+                                <div class="blog-post-details">
+                                    <h3 class="blog-post-header">{{ blog_post.title }}</h3>
+                                    <p class="blog-post-description">{{ blog_post.description }}</p>
+                                </div>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </div>
     </main>
 {% endblock  %}
 {% block js_files %}{% endblock %}

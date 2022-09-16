@@ -19,7 +19,8 @@ html {
 body {
     font-size: 1.6rem;
     font-weight: 400;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: var(--yellow);
 }
 
 ul {
@@ -128,4 +129,68 @@ header {
 #search-icon {
     font-size: 2rem;
     color: var(--purple);
+}
+
+/* blog-posts */
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(28.5rem, 28.5rem));
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+.blog-post-item {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1),
+        5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-link {
+    display: block;
+    color: var(--turquoise);
+}
+
+.blog-post-img-box {
+    position: relative;
+}
+
+.blog-post-img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-post-link:hover .blog-post-img-box .img-overlay {
+    background-color: rgb(28, 29, 31, .5);
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(28, 29, 31, 0);
+    transition: all 0.4s ease;
+}
+
+.blog-post-details {
+    width: 100%;
+    padding: .8rem;
+    background-color: var(--light-turquoise);
+}
+
+.blog-post-header {
+    color: var(--purple);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: .4rem;
+    word-wrap: break-word;
+}
+
+.blog-post-description {
+    color: var(--purple);
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-top: .4rem;
 }
