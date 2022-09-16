@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load filters %}
+
 {% block css_files %}{% endblock %}
 {% block page_title %}Ana Sayfa{% endblock %}
 {% block content %}
@@ -16,7 +18,7 @@
                                 </div>
                                 <div class="blog-post-details">
                                     <h3 class="blog-post-header">{{ blog_post.title }}</h3>
-                                    <p class="blog-post-description">{{ blog_post.description }}</p>
+                                    <p class="blog-post-description">{{ blog_post.description|text_clip:250 }}</p>
                                 </div>
                             </a>
                         </li>
