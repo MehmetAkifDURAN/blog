@@ -130,8 +130,14 @@ header {
     font-size: 2rem;
     color: var(--purple);
 }
-
+/* main */
 /* blog-posts */
+main{
+    /* header -> height: 7rem; */
+    /* footer -> height: 5.7rem; */
+    /* margin: 2rem; */
+    min-height: calc(100vh - 14.7rem);
+}
 .blog-posts {
     display: grid;
     grid-template-columns: repeat(4, minmax(28.5rem, 28.5rem));
@@ -194,4 +200,21 @@ header {
     font-size: 1.4rem;
     font-weight: 500;
     padding-top: .4rem;
+}
+
+/* footer */
+footer {
+    background-color: var(--turquoise);
+    color: var(--purple);
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+.copyright small{
+    font-size: 1.4rem;
+    font-weight: 500;
 }
