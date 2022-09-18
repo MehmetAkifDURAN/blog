@@ -1,0 +1,17 @@
+/* footer */
+footer {
+    background-color: $turquoise;
+    color: $purple;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+
+    small {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+}

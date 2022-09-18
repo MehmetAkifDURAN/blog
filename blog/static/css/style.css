@@ -1,218 +1,206 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-:root {
-    --yellow: #FFE194;
-    --light-turquoise: #E8F6EF;
-    --turquoise: #B8DFD8;
-    --purple: #4C4C6D;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 body {
-    font-size: 1.6rem;
-    font-weight: 400;
-    background-color: var(--yellow);
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #ffe194;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* display:flex; */
 .flx-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flx-space-between-center {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-/* display:flex; */
 
 /* header */
 header {
-    background-color: var(--turquoise);
-    user-select: none;
+  background-color: #b8dfd8;
+  user-select: none;
 }
 
+/* logo */
 #logo-box {
-    background-color: var(--purple);
+  background-color: #4c4c6d;
 }
-
 #logo-box a {
-    background-color: var(--light-turquoise);
-    color: var(--purple);
-    padding: 1.6rem 2.4rem;
-    cursor: pointer;
-    transition: all .4s ease-out;
+  background-color: #e8f6ef;
+  color: #4c4c6d;
+  padding: 1.6rem 2.4rem;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
 }
-
 #logo-box a:hover {
-    background-color: var(--purple);
-    color: var(--turquoise);
+  background-color: #4c4c6d;
+  color: #b8dfd8;
 }
 
-/* search-form */
+/* search box */
 .header-icons {
-    width: 50%;
-    padding: .8rem;
+  width: 50%;
+  padding: 0.8rem;
 }
 
 #search-form {
-    position: relative;
-    width: 6rem;
-    height: 5rem;
-    transition: .5s;
+  position: relative;
+  width: 6rem;
+  height: 5rem;
+  transition: all 0.5s;
 }
-
-#search-form:hover {
-    width: 100%;
-}
-
-#search-input {
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
-    font-size: 1.6rem;
-    padding: .8rem 1.6rem;
-    color: var(--purple);
-    z-index: 1;
-    background: var(--light-turquoise);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1),
-        5px 5px 5px rgba(0, 0, 0, 0.1);
-}
-
-#search-form #search-input::placeholder,
 #search-form #search-input {
-    color: transparent;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  padding: 0.8rem 1.6rem;
+  color: transparent;
+  z-index: 1;
+  background: #e8f6ef;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
-
-#search-form:hover #search-input::placeholder,
+#search-form #search-input::placeholder {
+  color: transparent;
+}
+#search-form:hover {
+  width: 100%;
+}
 #search-form:hover #search-input {
-    color: var(--purple);
+  color: #4c4c6d;
+}
+#search-form:hover #search-input::placeholder {
+  color: #4c4c6d;
 }
 
 #search-btn {
-    position: absolute;
-    right: 2rem;
-    outline: none;
-    border: none;
-    background: transparent;
-    z-index: 1;
-    cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  outline: none;
+  border: none;
+  background: transparent;
+  z-index: 1;
+  cursor: pointer;
 }
 
 #search-icon {
-    font-size: 2rem;
-    color: var(--purple);
+  font-size: 2rem;
+  color: #4c4c6d;
 }
+
 /* main */
-/* blog-posts */
-main{
-    /* header -> height: 7rem; */
-    /* footer -> height: 5.7rem; */
-    min-height: calc(100vh - 12.7rem);
-    padding: 2rem 0;
+main {
+  /* header -> height: 7rem; */
+  /* footer -> height: 5.7rem; */
+  min-height: calc(100vh - 12.7rem);
+  padding: 2rem 0;
 }
+
+/* start index.html */
 .blog-posts {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(28.5rem, 28.5rem));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(28.5rem, 28.5rem));
+  gap: 2rem;
 }
 
 .blog-post-item {
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1),
-        5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .blog-post-link {
-    display: block;
-    color: var(--turquoise);
+  display: block;
+  color: #b8dfd8;
+}
+.blog-post-link:hover .blog-post-img-box .img-overlay {
+  background-color: rgba(28, 29, 31, 0.5);
 }
 
 .blog-post-img-box {
-    position: relative;
+  position: relative;
 }
 
 .blog-post-img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-}
-
-.blog-post-link:hover .blog-post-img-box .img-overlay {
-    background-color: rgb(28, 29, 31, .5);
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 .img-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(28, 29, 31, 0);
-    transition: all 0.4s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 29, 31, 0);
+  transition: all 0.4s ease;
 }
 
 .blog-post-details {
-    width: 100%;
-    height: 17rem;
-    padding: .8rem;
-    background-color: var(--light-turquoise);
+  width: 100%;
+  height: 17rem;
+  padding: 0.8rem;
+  background-color: #e8f6ef;
 }
 
 .blog-post-header {
-    color: var(--purple);
-    font-size: 2.2rem;
-    font-weight: 700;
-    line-height: normal;
-    padding-bottom: .4rem;
-    word-wrap: break-word;
+  color: #4c4c6d;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 0.4rem;
+  word-wrap: break-word;
 }
 
 .blog-post-description {
-    color: var(--purple);
-    font-size: 1.4rem;
-    font-weight: 500;
-    padding-top: .4rem;
+  color: #4c4c6d;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-top: 0.4rem;
 }
 
+/* end index.html */
 /* footer */
 footer {
-    background-color: var(--turquoise);
-    color: var(--purple);
+  background-color: #b8dfd8;
+  color: #4c4c6d;
 }
 
 .copyright {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
 }
-.copyright small{
-    font-size: 1.4rem;
-    font-weight: 500;
+.copyright small {
+  font-size: 1.4rem;
+  font-weight: 500;
 }
+
+/*# sourceMappingURL=style.css.map */
