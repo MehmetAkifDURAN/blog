@@ -19,7 +19,6 @@ html {
 body {
     font-size: 1.6rem;
     font-weight: 400;
-    /* background-color: #fff; */
     background-color: var(--yellow);
 }
 
@@ -135,13 +134,12 @@ header {
 main{
     /* header -> height: 7rem; */
     /* footer -> height: 5.7rem; */
-    /* margin: 2rem; */
-    min-height: calc(100vh - 14.7rem);
+    min-height: calc(100vh - 12.7rem);
+    padding: 2rem 0;
 }
 .blog-posts {
     display: grid;
     grid-template-columns: repeat(4, minmax(28.5rem, 28.5rem));
-    margin: 2rem 0;
     gap: 2rem;
 }
 

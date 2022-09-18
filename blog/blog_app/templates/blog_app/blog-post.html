@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css_files %}{% endblock %}
+{% block page_title %}{{ blog_post.title }}{% endblock %}
+{% block content %}
+<main>
+    {{ blog_post.description }}
+</main>
+{% endblock %}
+{% block js_files %}{% endblock %}

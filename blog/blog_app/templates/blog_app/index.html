@@ -11,7 +11,7 @@
                 <ul class="blog-posts">
                     {% for blog_post in blog_posts %}
                         <li class="blog-post-item">
-                            <a href="" class="blog-post-link">
+                            <a href="{% url 'blog_post' blog_post.slug %}" class="blog-post-link">
                                 <div class="blog-post-img-box">
                                     <img src="{% static blog_post.image %}" class="blog-post-img">
                                     <div class="img-overlay"></div>
