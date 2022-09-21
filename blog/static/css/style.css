@@ -129,8 +129,7 @@ main {
   grid-template-columns: repeat(4, minmax(28.5rem, 28.5rem));
   gap: 2rem;
 }
-
-.blog-post-item {
+.blog-posts .blog-post-item {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -169,7 +168,7 @@ main {
   background-color: #e8f6ef;
 }
 
-.blog-post-header {
+h3.blog-post-header {
   color: #4c4c6d;
   font-size: 2.2rem;
   font-weight: 700;
@@ -185,7 +184,31 @@ main {
   padding-top: 0.4rem;
 }
 
-/* end index.html */
+/* End index.html */
+/* Start blog-post.html */
+h1.blog-post-header {
+  color: #4c4c6d;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.blog-post-items-container {
+  margin-top: 2rem;
+}
+
+.blog-post-items .blog-post-item {
+  margin: 1rem 0;
+  color: #4c4c6d;
+}
+.blog-post-items .blog-post-item .code-item {
+  background-color: #e8f6ef;
+  border: 1px solid #addad2;
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+}
+
+/* End blog-post.html */
 /* footer */
 footer {
   background-color: #b8dfd8;

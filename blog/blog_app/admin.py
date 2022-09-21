@@ -13,6 +13,7 @@ class BlogPostAdmin(admin.ModelAdmin):
 
 class BlogItemAdmin(admin.ModelAdmin):
     list_display = ('content', 'item_type', 'order_number', 'blog_post')
+    list_editable = ('order_number',)
     search_fields = ('content', 'blog_post')
     list_filter = ('item_type', 'blog_post')
 

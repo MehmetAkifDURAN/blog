@@ -4,7 +4,32 @@
 {% block page_title %}{{ blog_post.title }}{% endblock %}
 {% block content %}
 <main>
-    {{ blog_post.description }}
+    <div class="container">
+        <section id="blog-post-section">
+            <div class="blog-post-header-container">
+                <h1 class="blog-post-header">{{ blog_post.title }}</h1>
+            </div>
+            <div class="blog-post-items-container">
+                <ul class="blog-post-items">
+                    {% for blog_post_item in blog_post_items %}
+                        {% if blog_post_item.item_type == 'Text' %}
+                            <li class="blog-post-item">
+                                <p class="text-item">{{ blog_post_item.content }}</p>
+                            </li>
+                        {% elif blog_post_item.item_type == 'Code' %}
+                            <li class="blog-post-item">
+                                <pre class="code-item">{{ blog_post_item.content }}</pre>
+                            </li>
+                        {% endif %}
+                    {% empty %}
+                        <li>
+                            <p>Blog Yazısı Yayınlanmadı</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+    </div>
 </main>
 {% endblock %}
 {% block js_files %}{% endblock %}

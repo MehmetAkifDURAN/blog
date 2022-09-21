@@ -13,7 +13,9 @@ def index(request):
 
 def blogPost(request, slug):
     blog_post = get_object_or_404(BlogPost, slug=slug)
+    blog_post_items = blog_post.items.all().order_by('order_number')
     context = {
-        'blog_post': blog_post
+        'blog_post': blog_post,
+        'blog_post_items': blog_post_items
     }
     return render(request, 'blog_app/blog-post.html', context)
