@@ -22,29 +22,21 @@ class BlogPost(models.Model):
         return f'{self.title} - {self.blogger}'
 
 
-class Code(models.Model):
-    code = models.TextField(verbose_name='Kod')
-    order_number = models.IntegerField(verbose_name='Sıra No')
+class BlogItem(models.Model):
+    ITEM_TYPE_CHOICES = [
+        ('Text', 'Metin'),
+        ('Code', 'Kod'),
+    ]
+    content = models.TextField(verbose_name='İçerik')
+    item_type = models.CharField(
+        verbose_name='İçerik Tipi', max_length=5, choices=ITEM_TYPE_CHOICES)
+    order_number = models.IntegerField('Sıra Numarası')
     blog_post = models.ForeignKey(
-        to=BlogPost, on_delete=models.CASCADE, verbose_name='Blog Yazısı', related_name='codes')
+        to=BlogPost, on_delete=models.CASCADE, verbose_name="Blog Yazısı", related_name='items')
 
     class Meta:
-        verbose_name = 'Kod'
-        verbose_name_plural = 'Kodlar'
+        verbose_name = 'Blog Öğesi'
+        verbose_name_plural = 'Blog Öğeleri'
 
     def __str__(self):
-        return f'{self.code[:20]}... - {self.blog_post}'
-
-
-class Text(models.Model):
-    text = models.TextField(verbose_name='Metin')
-    order_number = models.IntegerField(verbose_name='Sıra No')
-    blog_post = models.ForeignKey(
-        to=BlogPost, on_delete=models.CASCADE, verbose_name='Blog Yazısı', related_name='texts')
-
-    class Meta:
-        verbose_name = 'Metin'
-        verbose_name_plural = 'Metinler'
-
-    def __str__(self):
-        return f'{self.text[:20]}... - {self.blog_post}'
+        return f'{self.content[:20]} - {self.blog_post}'
