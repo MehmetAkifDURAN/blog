@@ -1,0 +1,40 @@
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 9px;
+    }
+
+    .container {
+        width: 100%;
+        margin: none;
+    }
+
+    main {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .blog-posts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .blog-post-img-box {
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .blog-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:576px) {
+    .blog-posts {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blog-post-img-box {
+        height: 30rem;
+    }
+}

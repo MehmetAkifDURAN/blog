@@ -1,0 +1,27 @@
+// blog-post.html
+h1.blog-post-header {
+    color: $purple;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.blog-post-items-container {
+    margin-top: 2rem;
+}
+
+.blog-post-items {
+    .blog-post-item {
+        margin: 1rem 0;
+        color: $purple;
+
+        .code-item {
+            font-family: $code-font;
+            overflow: auto;
+            background-color: $light-turquoise;
+            border: 1px solid darken($turquoise, 3%);
+            padding: 1.6rem;
+            border-radius: .8rem;
+        }
+    }
+}
