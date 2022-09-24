@@ -1,3 +1,2 @@
 # scss kodlarını css kodlarına dönüştürme
-Proje düzeyindeki **static** dizininde aşağıdaki komutu çalıştırarak **scss** kodlarını **css** kodlarına dönüştürebilirsiniz.
-`sass --watch ./scss:./css`
+`sass --watch ./scss:./css` -> Proje düzeyindeki **static** dizininde bu komutu çalıştırarak **scss** kodlarını **css** kodlarına dönüştürebilirsiniz.
